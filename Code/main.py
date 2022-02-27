@@ -1,4 +1,20 @@
-# Modules
+'''
+#Project Name: Main
+#Last Updated: 27/02/2022 20:25
+#Last Updated by: Sarthak S Kumar
+#Changelog:
+
+`   27/02/2022 20:25 Sarthak S Kumar
+        # Added Comments
+        # Created Intro Frame with Background
+        # Added Buttons for Sudoku and Rat in a Maze
+        # Added choose screen with buttons
+#Pending:
+    # To link buttons with functions
+    # Scaling issues
+    # Importing RIAM and Sudoku Codes
+'''
+
 
 from tkinter import *
 
@@ -8,7 +24,7 @@ windll.shcore.SetProcessDpiAwareness(1)
 master = Tk()
 master.title("Rounded Button")
 master.geometry("1900x1000")
-
+# Intro Screem
 intro = Frame(master)
 intro.place(anchor="nw")
 
@@ -20,6 +36,7 @@ canvas1.create_image(0, -40, image=bg, anchor="nw")
 intro.after(3000, intro.destroy)
 intro.wait_window(intro)
 
+# choose screen
 choose = Frame(master)
 choose.place(anchor="nw")
 
@@ -34,6 +51,7 @@ click_riam = PhotoImage(file=r'Code\Assets\riam_img.png')
 img_label = Label(image=click_sudoku, bg="#ffffff")
 img_label = Label(image=click_riam, bg="#ffffff")
 
+# Buttons for choosing project
 Button(choose, image=click_sudoku, command=None, borderwidth=0, bg="#ffffff", highlightcolor="#ffffff").place(x=600, y=540, anchor='center')
 Button(choose, image=click_riam, command=None, borderwidth=0, bg="#ffffff", highlightcolor="#ffffff").place(x=1350, y=540, anchor='center')
 
