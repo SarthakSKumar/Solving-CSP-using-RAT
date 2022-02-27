@@ -17,7 +17,7 @@
     23/02/2022 23:12 Sarthak S Kumar
         # Functionality to change the color of squares visited previously
         # Canvas size updation in maze_ui
-        # Code Refinement and Comments
+        # Code Refinement and comments added
     23/02/2022 20:54 Sarthak S Kumar
         # Added Functionality to check whether the user solution is correct or not
         # UI updation when user solves the maze, or gives up
