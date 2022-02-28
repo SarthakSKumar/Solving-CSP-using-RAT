@@ -4,6 +4,9 @@
 #Last Updated by: Sarthak S Kumar
 
 #Changelog:
+    28/02/2022 20:29 Sarthak S Kumar
+        #Fixed Error while trying to execute from main.py
+        
     27/02/2022 15:29 Sarthak S Kumar
         # Fixed 'Nah' Button Not working in next_UI
         # Fixed Numbers overlaying above existing numbers in Sudoku_UI
@@ -126,9 +129,10 @@ first_puzzle = True
 
 def sudoku_main():
     """Tkinter Window Initialisation"""
-    master = Tk()
-    master.title("Sudoku")
-    master.geometry("1900x1080")
+    master = Toplevel()  # master = Tk() if main window
+    master.title("Rat in a Maze")
+    # master.attributes('-fullscreen', True) #To enable fullscreen mode
+    master.geometry("1920x1080")
     master.configure(bg="#4d1354")
 
     if first_puzzle:
@@ -420,6 +424,7 @@ def sudoku_main():
     mainloop()
 
 
-if __name__ == '__main__':  # Program Execution begins here
-
+# For Standalone
+"""if __name__ == "__main__":
     sudoku_main()
+"""
