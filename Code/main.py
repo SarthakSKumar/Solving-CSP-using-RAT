@@ -3,10 +3,13 @@
 #Last Updated: 27/02/2022 20:25
 #Last Updated by: Sarthak S Kumar
 #Changelog:
+    1/02/2022 10:13 Sarthak S Kumar
+        # Updated Window Title
+        
     28/02/2022 20:29 Sarthak S Kumar
         # To link buttons with functions
         # Importing RIAM and Sudoku Codes
-        
+
 `   27/02/2022 20:25 Sarthak S Kumar
         # Added Comments
         # Created Intro Frame with Background
@@ -30,7 +33,7 @@ import solve_sudoku_UI  # noqa: E402
 windll.shcore.SetProcessDpiAwareness(1)
 
 master = Tk()
-master.title("Rounded Button")
+master.title("Solving Constraint Satisfaction Problems using RAT")
 master.geometry("1920x1080")
 # Intro Screem
 intro = Frame(master)
