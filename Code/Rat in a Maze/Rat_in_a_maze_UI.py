@@ -129,7 +129,7 @@ def algo_main():  # Backtracking Algorithm for Rat in a Maze
 def riam_main():  # Program execution begins from here.
     """Tkinter Window Initialisation"""
 
-    master = Tk()  # master = Tk() if main window
+    master = TopLevel()  # master = Tk() if main window
     master.title("Rat in a Maze")
     # master.attributes('-fullscreen', True) #To enable fullscreen mode
 
