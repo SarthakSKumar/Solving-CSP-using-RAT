@@ -1,0 +1,44 @@
+Project Name: solve_sudoku
+Last Updated: 27/02/2022 15:29
+Last Updated by: Sarthak S Kumar
+
+Changelog:
+    02/03/2022 18:33 Sarthak S Kumar
+        # Changed Window Title
+        
+    28/02/2022 20:29 Sarthak S Kumar
+        #Fixed Error while trying to execute from main.py
+        
+    27/02/2022 15:29 Sarthak S Kumar
+        # Fixed 'Nah' Button Not working in next_UI
+        # Fixed Numbers overlaying above existing numbers in Sudoku_UI
+        # Added play info in sudoku_UI screen
+        # Added chances available functionality
+
+    26/02/2022 20:25 Sarthak S Kumar
+        # Success and Failure Messages
+        # Solved text overlapping during user entry in question_canvas
+        # Added key bindings
+        # Resolved 'Nah' Button not working in next_UI
+        # Code Refinement and Comments
+
+    26/02/2022 13:17 Varun Chandrashekar
+        # Resolved Copy bug, while trying to store and access puzzle question
+
+    25/02/2022 21:19 Sarthak S Kumar
+        # Added the new try, prompt window (Exit Screen)
+        # Resolved Username not displaying while using main()
+        # Added Functionality to let the user solve the puzzle manually
+        # UI updation when user solves the puzzle, or gives up
+        # Canvas size updation in sudoku_ui
+
+    24/02/2022 22:59 Sarthak S Kumar
+        # Added Welcome Screen, User Entry Screen, and Sudoku UI Screen
+        # Show the randomly generated sudoku puzzle
+        # Added Navigator/Selector functionality
+    
+    24/02/2022 18:47 Varun Chandrashekar
+        # Algorithm to solve sudoku puzzles using Backtracking
+        # Command line running of the program with output
+Pending:
+    # Scaling Issues
