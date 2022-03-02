@@ -1,6 +1,6 @@
 '''
 #Project Name: Rat in a maze
-#Last Updated: 27/02/2022 02:17
+#Last Updated: 1/03/2022 13:40
 #Last Updated by: Sarthak S Kumar
 #Changelog:
     1/03/2022 13:40 Sarthak S Kumar
@@ -129,7 +129,7 @@ def algo_main():  # Backtracking Algorithm for Rat in a Maze
 def riam_main():  # Program execution begins from here.
     """Tkinter Window Initialisation"""
 
-    master = TopLevel()  # master = Tk() if main window
+    master = Toplevel()  # master = Tk() if main window
     master.title("Rat in a Maze")
     # master.attributes('-fullscreen', True) #To enable fullscreen mode
 
