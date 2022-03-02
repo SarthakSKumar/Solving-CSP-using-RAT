@@ -1,0 +1,25 @@
+Project Name: Main
+Last Updated: 02/03/2022 18:45
+Last Updated by: Sarthak S Kumar
+Changelog:
+    2/03/2022 18:45 Sarthak S Kumar
+        # Code Optimisation
+        
+    1/02/2022 10:13 Sarthak S Kumar
+        # Updated Window Title
+        # Updated Background
+        # Added Exit Button
+        # Comments and refining
+
+    28/02/2022 20:29 Sarthak S Kumar
+        # To link buttons with functions
+        # Importing RIAM and Sudoku Codes
+
+`   27/02/2022 20:25 Sarthak S Kumar
+        # Added Comments
+        # Created Intro Frame with Background
+        # Added Buttons for Sudoku and Rat in a Maze
+        # Added choose screen with buttons
+Pending:
+    # Scaling issues
+'''

@@ -1,33 +1,11 @@
-'''
+"""
 #Project Name: Main
 #Last Updated: 27/02/2022 20:25
 #Last Updated by: Sarthak S Kumar
-#Changelog:
-    1/02/2022 10:13 Sarthak S Kumar
-        # Updated Window Title
-        # Updated Background
-        # Added Exit Button
-        # Comments and refining
-
-    28/02/2022 20:29 Sarthak S Kumar
-        # To link buttons with functions
-        # Importing RIAM and Sudoku Codes
-
-`   27/02/2022 20:25 Sarthak S Kumar
-        # Added Comments
-        # Created Intro Frame with Background
-        # Added Buttons for Sudoku and Rat in a Maze
-        # Added choose screen with buttons
-#Pending:
-    # Scaling issues
-'''
+"""
 
 # Modules
-
-from ctypes import windll  # To Enable High Resolution Scaling in Windows OS
-
 from tkinter import *
-
 import sys  # noqa: E402
 sys.path.append('Code\Sudoku')  # noqa: E402
 sys.path.append('Code\Rat in a Maze')  # noqa: E402
@@ -36,7 +14,10 @@ sys.path.append('Code\Rat in a Maze')  # noqa: E402
 import Rat_in_a_maze_UI  # noqa: E402
 import solve_sudoku_UI  # noqa: E402
 
-windll.shcore.SetProcessDpiAwareness(1)
+from ctypes import windll
+windll.shcore.SetProcessDpiAwareness(1)  # To Enable High Resolution Scaling in Windows OS
+
+"""Tkinter Window Initialisation"""
 
 master = Tk()
 master.title("Solving Constraint Satisfaction Problems using RAT")
