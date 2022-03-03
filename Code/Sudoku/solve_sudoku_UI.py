@@ -138,7 +138,6 @@ def csolve(puzzle, small_boxes):  # Solving the puzzle
     return False
 
 
-global first_puzzle
 first_puzzle = True
 
 
