@@ -6,7 +6,6 @@ Last Updated by: Sarthak S Kumar
 # Modules
 import copy
 import math
-from generate_random import generate
 import random
 import datetime
 from tkinter import *
@@ -27,6 +26,54 @@ windll.shcore.SetProcessDpiAwareness(1)  # To Enable High Resolution Scaling in 
 
 
 # Sudoku Global Functions
+def generate(difficulty, make_small_boxes):
+
+    initial = [
+        [9, 5, 7, 6, 1, 3, 2, 8, 4],
+        [4, 8, 3, 2, 5, 7, 1, 9, 6],
+        [6, 1, 2, 8, 4, 9, 5, 3, 7],
+        [1, 7, 8, 3, 6, 4, 9, 5, 2],
+        [5, 2, 4, 9, 7, 1, 3, 6, 8],
+        [3, 6, 9, 5, 2, 8, 7, 4, 1],
+        [8, 4, 5, 7, 9, 2, 6, 1, 3],
+        [2, 9, 1, 4, 3, 6, 8, 7, 5],
+        [7, 3, 6, 1, 8, 5, 4, 2, 9]
+    ]
+
+    shuffles = random.randint(5, 11)
+
+    # shuffling columns and rows
+    for i in range(shuffles):
+
+        indexs = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+
+        for index in indexs:
+            indices = random.sample(index, 2)
+
+            for row in initial:
+                row[indices[0]], row[indices[1]
+                                     ] = row[indices[1]], row[indices[0]]
+            initial[indices[0]], initial[indices[1]
+                                         ] = initial[indices[1]], initial[indices[0]]
+
+    if(difficulty == 1):
+        probability = (0.6, 0.4)
+    elif(difficulty == 2):
+        probability = (0.5, 0.5)
+    elif(difficulty == 3):
+        probability = (0.4, 0.6)
+
+    for row in initial:
+        for pos in range(0, 9):
+            if random.choices([True, False], weights=probability)[0]:
+                row[pos] = 0
+
+    if(is_puzzle_valid(initial, make_small_boxes(initial))):
+        return initial
+    else:
+        return None
+
+
 def make_small_boxes(current_board):
 
     small_boxes = {"11": [], "12": [], "13": [], "21": [], "22": [], "23": [], "31": [], "32": [], "33": []}
