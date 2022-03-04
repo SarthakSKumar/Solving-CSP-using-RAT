@@ -1,7 +1,11 @@
 Project Name: Rat in a maze
-Last Updated: 1/03/2022 13:40
+Last Updated: 04/03/2022 21:43
 Last Updated by: Sarthak S Kumar
 Changelog:
+    04/03/2022 21:43 Sarthak S Kumar
+        # Changed the rat object color
+        # UI Changes
+        
     1/03/2022 13:40 Sarthak S Kumar
         # Bug Fixes
         # Added new maze sizes

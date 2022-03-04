@@ -1,6 +1,6 @@
 """
 Project Name: Rat in a maze
-Last Updated: 1/03/2022 13:40
+Last Updated: 04/03/2022 21:43
 Last Updated by: Sarthak S Kumar
 """
 # Modules
@@ -177,7 +177,7 @@ def riam_main():  # Program execution begins from here.
         rectbox_coordinates[3] += squaresize
 
     # Rat Object to Traverse through the maze
-    rat = question_canvas.create_oval(0, 0, squaresize, squaresize, fill="green", width=0)
+    rat = question_canvas.create_oval(0, 0, squaresize, squaresize, fill="#bd174e", width=0)
 
     endpoint = question_canvas.create_rectangle(squaresize*(N-1), squaresize*(N-1), squaresize*N, squaresize * N, fill="#660033", outline="#660033")
 
