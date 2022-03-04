@@ -1,6 +1,6 @@
 """
 Project Name: solve_sudoku
-Last Updated: 02/03/2022 18:33
+Last Updated: 04/03/2022 19:42
 Last Updated by: Sarthak S Kumar
 """
 # Modules
@@ -68,10 +68,7 @@ def generate(difficulty, make_small_boxes):
             if random.choices([True, False], weights=probability)[0]:
                 row[pos] = 0
 
-    if(is_puzzle_valid(initial, make_small_boxes(initial))):
-        return initial
-    else:
-        return None
+    return initial
 
 
 def make_small_boxes(current_board):
@@ -176,16 +173,35 @@ def sudoku_main():  # Program execution begins from here.
     Label(user_entry, text="Welcome", font=(font_face, 50), fg=white, bg=purple).place(anchor='center', x=960, y=275)
 
     Label(user_entry, text="Your Name: ", font=(font_face, 25), fg=white, bg=purple).place(anchor='e', x=800, y=450)
+    Label(user_entry, text="Difficulty: ", font=(font_face, 25), fg=white, bg=purple).place(anchor='e', x=800, y=540)
 
     sizebox = Entry(user_entry, font=(font_face, 20), fg=white, bg=purple)
     sizebox.place(anchor='w', x=960, y=450)
 
+    clicked = StringVar()
+    clicked.set("Select one")
+
+    difficulties = ["Easy", "Intermediate", "Advanced"]
+    drop = OptionMenu(user_entry, clicked, *difficulties)
+    drop.place(anchor='w', x=960, y=540)
+    drop.config(font=(font_face, (20)), bg=purple, fg=white)
+
     def movenext():
-        global username
+        global username, x
+
+        x = clicked.get()
+        if x == "Easy":
+            x = 3
+        elif x == "Intermediate":
+            x = 2
+        elif x == "Advanced":
+            x = 1
+        else:
+            raise Exception("Error in getting difficulty level")
         username = sizebox.get()
         user_entry.after(1000, user_entry.destroy)
 
-    submit = Button(user_entry, text="Submit", command=movenext, bg=white, font=(font_face, (25)), fg=purple).place(anchor="center", x=960, y=800)
+    submit = Button(user_entry, text="Submit", command=movenext, bg=purple, font=(font_face, (25)), fg=white, highlightcolor=white, highlightbackground=purple).place(anchor="center", x=960, y=800)
     user_entry.wait_window(user_entry)
 
     """Sudoku UI"""
@@ -234,7 +250,8 @@ def sudoku_main():  # Program execution begins from here.
         question_canvas.create_line(80*i, 0, 80*i, 730, width=2, fill=white)
         question_canvas.create_line(0, 80*i, 730, 80*i, width=2, fill=white)
 
-    problem = generate(1, make_small_boxes)  # Generates random valid sudoku puzzle
+    problem = generate(x, make_small_boxes)  # Generates random valid sudoku puzzle
+
     y_coord, x_coord, p, q = 40, 40, 0, 0
     allowed_squares = []
     for i in problem:  # adding numbers from question puzzle

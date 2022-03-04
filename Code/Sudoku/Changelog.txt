@@ -1,8 +1,16 @@
 Project Name: solve_sudoku
-Last Updated: 27/02/2022 15:29
+Last Updated: 04/03/2022 19:42
 Last Updated by: Sarthak S Kumar
 
 Changelog:
+    04/03/2022 19:42 Sarthak S Kumar
+        # Added Difficulty Levels
+        # UI changes
+
+    03/03/2022 15:37 Sarthak S Kumar
+        # Removed generate_random.py file 
+        # Minor changes
+        
     02/03/2022 18:33 Sarthak S Kumar
         # Changed Window Title
         # Code Optimisation
