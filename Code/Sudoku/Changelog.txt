@@ -1,8 +1,12 @@
 Project Name: solve_sudoku
-Last Updated: 04/03/2022 19:42
+Last Updated: 13/03/2022 10:10
 Last Updated by: Sarthak S Kumar
 
 Changelog:
+    13/03/2022 10:10 Sarthak S Kumar
+        # Show solution in different color
+        # Code Optimisation
+
     04/03/2022 19:42 Sarthak S Kumar
         # Added Difficulty Levels
         # UI changes

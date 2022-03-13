@@ -1,6 +1,6 @@
 """
 Project Name: solve_sudoku
-Last Updated: 04/03/2022 19:42
+Last Updated: 13/03/2022 10:10
 Last Updated by: Sarthak S Kumar
 """
 # Modules
@@ -251,6 +251,7 @@ def sudoku_main():  # Program execution begins from here.
         question_canvas.create_line(0, 80*i, 730, 80*i, width=2, fill=white)
 
     problem = generate(x, make_small_boxes)  # Generates random valid sudoku puzzle
+    puzzle = copy.deepcopy(problem)
 
     y_coord, x_coord, p, q = 40, 40, 0, 0
     allowed_squares = []
@@ -407,7 +408,16 @@ def sudoku_main():  # Program execution begins from here.
         y_coord, x_coord = 40, 40
         for i in sudoku_sol:  # Displays the puzzle answer
             for j in i:
-                solution_canvas.create_text(x_coord, y_coord, font=(font_face, 30), fill=white, text=j)
+                solution_canvas.create_text(x_coord, y_coord, font=(font_face, 30), fill="#0AF174", text=j)
+                x_coord += 80
+            x_coord = 40
+            y_coord += 80
+
+        y_coord, x_coord = 40, 40
+        for i in puzzle:  # Displays the puzzle answer
+            for j in i:
+                if j != 0:
+                    solution_canvas.create_text(x_coord, y_coord, font=(font_face, 30), fill="white", text=j)
                 x_coord += 80
             x_coord = 40
             y_coord += 80
