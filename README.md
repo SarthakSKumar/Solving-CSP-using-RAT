@@ -20,12 +20,12 @@
  </table>
  
 ## 🤝 Team Members
-<h4>✦ Sarthak S Kumar<br>
-    ✦ Varun C<br>
-    ✦ Vishal M Godi<br></h4>
+<h4>✦ <a href = "https://github.com/SarthakSKumar">Sarthak S Kumar</a><br>
+    ✦ <a href = "https://github.com/MaNameEJeff">Varun C</a><br>
+    ✦ <a href = "https://github.com/VishalMGodi">Vishal M Godi</a><br></h4>
     
     
-## 📤 Contributing to Polygraph Machine MPCA Project
+## 📤 Contributing to Solving-CSP-using-RAT
 We are so glad that you are interested in contributing to the this project.
 We only have a couple of rules and we hope you enjoy the process :)
 
